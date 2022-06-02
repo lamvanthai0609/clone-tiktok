@@ -8,5 +8,119 @@
 .inner {
   height: 100%;
   width: var(--defaulLayout-width);
-  background-color: #ccc;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 24px;
+}
+.logo {
+}
+.search {
+  position: relative;
+  height: 46px;
+  width: 361px;
+  background-color: var(--search-background-clolor);
+  border-radius: 50px;
+  display: flex;
+  padding-left: 1.6rem;
+  align-items: center;
+  border: 1px solid transparent;
+  input {
+    font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+    caret-color: rgba(254, 44, 85, 1);
+    font-weight: 400;
+    font-size: 16px;
+
+    flex: 1;
+    border: none;
+    outline: none;
+    color: var(--back);
+    background-color: transparent;
+  }
+
+  &:focus-within {
+    border: 1px solid var(--btn-color-search);
+  }
+}
+input:not(:placeholder-shown) ~ .btn-search {
+  color: var(--btn-color-when-text);
+}
+
+.spinner,
+.btn-clear {
+  height: 100%;
+  font-size: 16px;
+  color: var(--btn-clear-color);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: calc(var(--btn-width) + 1.6rem);
+  background-color: transparent;
+}
+.spinner {
+  font-size: 16px;
+}
+
+.btn-search {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 50px 50px 0px;
+  font-size: 24px;
+  font-weight: 200;
+  color: var(--btn-color-search);
+  border: none;
+  background-color: transparent;
+  width: var(--btn-width);
+  cursor: pointer;
+  &::before {
+    content: '';
+    height: 60%;
+    background-color: var(--btn-color-search);
+    position: absolute;
+    z-index: 10;
+    width: 1px;
+    right: calc(var(--btn-width) + 1px);
+  }
+  &:hover {
+    background-color: var(--btn-background-color-hover);
+  }
+  &:active {
+    background-color: var(--btn-background-color-active);
+  }
+}
+
+.result {
+  width: 361px;
+  padding-top: 8px;
+}
+.account {
+  height: 30px;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: rgba(22, 24, 35, 0.5);
+}
+.more {
+  margin-left: 16px;
+  position: relative;
+  cursor: pointer;
+  font-style: normal;
+  padding: 0 4px;
+}
+.Upload {
+  font-family: ProximaNova, Arial, Tahoma, PingFangSC, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    color: var(--a-hover);
+  }
 }

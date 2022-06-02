@@ -3,9 +3,22 @@
 
 :root {
   --primary: #fe2c55;
-
+  --back: #000;
+  --white: #fff;
+  --a-hover: rgb(22, 24, 35);
+  --icon-check: rgb(32, 213, 236);
+  --search-background-clolor: rgba(22, 24, 35, 0.06);
   --defaulLayout-width: 1150px;
   --sideBar-width: 356px;
+
+  --btn-background-color-hover: rgba(22, 24, 35, 0.03);
+  --btn-background-color-active: rgba(22, 24, 35, 0.06);
+
+  --btn-color-search: rgba(22, 24, 35, 0.34);
+  --btn-color-when-text: rgba(22, 24, 35, 0.75);
+  --btn-width: 52px;
+
+  --btn-clear-color: rgba(22, 24, 35, 0.34);
 }
 
 * {
@@ -23,4 +36,15 @@ body {
   font-size: 1.6rem;
   line-height: 1.5;
   text-rendering: optimizespeed;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    color: var(--back);
+  }
+}
+input,
+button {
+  border: none;
+  outline: none;
 }
